@@ -308,6 +308,34 @@ footer {
     margin-top: 20px;
 }
 
+#container-mensagem {
+    max-width: 600px;
+    margin: 100px auto 20px auto; /* Define margem superior, centraliza horizontalmente e adiciona margem inferior */
+}
+
+.contact-form input {
+    width: 100%;
+    padding: 10px 0px;
+    border: 1px solid var(--borda);
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+.contact-form input[type=text] {
+    height: 100px;
+
+}
+
+
+button {
+    background-color: var(--destaque);
+    color: var(--texto-inverso);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.5s;
+}
+
 @media screen and (min-width: 768px) {
     #skill-container {
         grid-template-columns: 1fr 1fr;

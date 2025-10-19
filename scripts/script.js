@@ -24,6 +24,13 @@ const header = document.querySelector('header');
 
 navLinks.forEach(link => {
   link.addEventListener('click', function(e) {
+    const href = this.getAttribute('href');
+
+    // Se o link não for para uma âncora na mesma página, não faz nada e deixa o navegador seguir o link.
+    if (!href.startsWith('#')) {
+      return;
+    }
+
     e.preventDefault();
     const target = document.querySelector(this.getAttribute('href'));
     if (target) {
