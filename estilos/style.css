@@ -96,7 +96,7 @@ section#ficha h1 {
 
 article h2 {
     color: var(--destaque);
-    margin-bottom: 10px;
+    margin-bottom: 20px;
     font-size: 1.3em;
 }   
 section#ficha p {
@@ -194,6 +194,56 @@ article{
     height: 100%;
     background-color: var(--destaque);
     border-radius: 4px;
+}
+#formacao-container  {
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+#formacao-container .curso {
+    background-color: var(--fundo-principal);
+    margin-bottom: 15px;
+    border-radius: 8px;
+    border-left: 5px solid var(--destaque-inverso);
+    padding-left: 15px;
+    transition: border-left-width 0.5s;
+}
+
+#formacao-container .curso:hover{
+    border-left-width: 15px;
+    cursor: pointer;
+}
+#experiencia-container  {
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+#experiencia-container .cargo {
+    background-color: var(--fundo-principal);
+    margin-bottom: 15px;
+    border-radius: 8px;
+    border-left: 5px solid var(--destaque-inverso);
+    padding-left: 15px;
+    transition: border-left-width 0.5s;
+}
+
+#experiencia-container .cargo:hover{
+    border-left-width: 15px;
+    cursor: pointer;
+}
+
+#experiencia-container .periodo,
+#formacao-container .periodo {
+    font-size: 0.8em;
+    color: var(--texto);
+    font-weight: bold;
+}
+
+#experiencia-container .instituicao,
+#formacao-container .instituicao {
+    font-size: 1.1em;
+    color: var(--destaque-inverso);
+    margin: 5px 0;
 }
 
 @media screen and (min-width: 768px) {
