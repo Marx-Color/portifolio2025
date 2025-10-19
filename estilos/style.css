@@ -123,17 +123,24 @@ div#social a:hover {
 }
 
 section#sobre {
-    background-color: var(--fundo-card);
+    background-color: var(--fundo-card); /* Voltando a ter fundo */
     padding: 20px;
     border-radius: 8px;
     grid-column: 2;
     margin-top: 20px;
 }
+
+section#sobre h2 {
+    color: var(--destaque);
+    margin-bottom: 10px;
+    font-size: 1.3em;
+}
 article{
-    background-color: var(--fundo-card);
+    background-color: var(--fundo-card); /* Mantido para que os cards tenham fundo */
     padding: 20px;
     border-radius: 8px;
-    margin-top: 20px;
+    border: 1px solid #e0e0e0; /* Adicionando uma borda sutil */
+    margin-bottom: 20px; /* Espaçamento entre os artigos */
 }
 .video-conteiner {
     position: relative;
@@ -151,7 +158,50 @@ article{
     border-radius: 8px;
 }
 
+#skill-container {
+    display: grid;
+    grid-template-columns:1fr;
+    gap: 30px;
+    
+}
 
+#skill-container .info{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+#skill-container .nome{
+    font-weight: bold;
+    color: var(--texto);
+}
+
+#skill-container .porcent{
+    font-weight: bold;
+    color: var(--destaque);
+}
+
+#skill-container .barra{
+    width: 100%;
+    height: 20px;
+    background-color: var(--fundo-principal);
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+#skill-container .progresso{
+    height: 100%;
+    background-color: var(--destaque);
+    border-radius: 4px;
+}
+
+@media screen and (min-width: 768px) {
+    #skill-container {
+        grid-template-columns: 1fr 1fr;
+    }
+    
+}
 
 footer {
     background-color: var(--destaque);
