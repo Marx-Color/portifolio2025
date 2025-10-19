@@ -36,13 +36,13 @@ header {
     text-align: center;
     display: flex;
     justify-content: flex-end;
-    align-content: center;
-    position: fixed;
-    top: 1px;
-    left: 0;
-    right: 0;
-    z-index: 1000;
+    align-items: center; /* 'align-content' é para múltiplas linhas em flexbox, 'align-items' é para alinhar itens em uma única linha */
+    position: fixed; /* Mude para 'fixed' para fixar no topo */
+    top: 0;
+    width: 100%; /* Garante que o header ocupe toda a largura */
     margin-bottom: 20px;
+    z-index: 1;
+    
 }
 
 nav#menu ul {
@@ -63,6 +63,18 @@ nav#menu a {
 nav#menu a:hover {
     background-color: var(--destaque-inverso);
     color: var(--destaque);  
+}
+
+/* Estilos para o ícone do tema */
+#botao-tema .fa-sun {
+    display: none; /* Esconde o sol por padrão */
+}
+
+.escuro #botao-tema .fa-moon {
+    display: none; /* Esconde a lua no tema escuro */
+}
+.escuro #botao-tema .fa-sun {
+    display: inline-block; /* Mostra o sol no tema escuro */
 }
 
 main {
